@@ -1,0 +1,757 @@
+/* ==========================================================================
+   Estilos Generales (Reset y Paleta de Colores basada en la foto)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+    ),
+    url(imagenes/fontidueño-entrada.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: rgba(255, 255, 255, 0.9); 
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal que centra el contenido */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: -40px;
+}
+
+/* ==========================================================================
+   Encabezado (Nombre e Institución) Página index.html
+   ========================================================================== */
+.header-colegio {
+    width: 100%;
+    margin-bottom: 60px;
+    padding-top: 40px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.nombre-colegio-top {
+    white-space: nowrap;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main-title-wrapper {
+    display: flex;
+    align-items: center; 
+    gap: 30px;           
+}
+
+.titulo-principal {
+    font-size: 3rem;   
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase; 
+}
+
+.escudo {
+        width: 160px;
+        height: 160px;     
+        object-fit: contain;     
+        position: relative;     
+        top: -7px;
+}
+
+.escudo-inicio {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   Pantalla de Inicio (index.html)
+   ========================================================================== */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.btn-role {
+    display: inline-block;
+    background-color: #2a4d7c;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-role:hover {
+    background-color: #ffffff;
+    color: #1b365d;
+    transform: translateY(-5px);
+}
+
+/* ==========================================================================
+   Vista de Salones (salones.html - Estilo foto)
+   ========================================================================== */
+.rooms-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.room-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 280px;
+    text-decoration: none;
+}
+
+.room-card h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: border 0.3s;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-card:hover {
+    transform: scale(1.05);
+}
+
+.room-card:hover h3 {
+    border-color: #9d4edd;
+}
+
+.volver-inicio-centrado {
+    text-align: center;
+}
+
+/* ==========================================================================
+   Formulario de Login (login.html)
+   ========================================================================== */
+.login-form {
+    background-color: #2a4d7c;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.login-form h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #ffffff;
+    color: #1b365d;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Tabla de Inventario (inventario.html)
+   ========================================================================== */
+.room-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.table-container {
+    background-color: #2a4d7c;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.inventory-table td {
+    user-select: none;
+}
+
+.inventory-table th, .inventory-table td {
+    padding: 15px;
+    border-bottom: 1px solid #1b365d;
+}
+
+.inventory-table th {
+    background-color: #1b365d;
+    font-size: 1.1rem;
+}
+
+.inventory-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* NUEVO: campos de texto dentro de la fila editable */
+.inventory-table input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* ===================================================
+   Barra de búsqueda con botón "+ Agregar fila" al lado
+=================================================== */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container input {
+    width: 350px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-container.profesor {
+    justify-content: flex-start;
+    padding-left: 40px;
+    gap: 40px;
+}
+
+.btn-agregar-fila {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-eliminar {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-restablecer-clave,
+.btn-eliminar-usuario {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.btn-restablecer-clave {
+    background-color: #d4a017;
+    color: white;
+}
+
+.btn-eliminar-usuario {
+    background-color: #c0392b;
+    color: white;
+}
+
+.btn-restablecer-clave:hover,
+.btn-eliminar-usuario:hover {
+    transform: scale(1.03);
+}
+
+.btn-editar-articulo {
+    padding: 7px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.btn-editar-articulo:hover {
+    transform: scale(1.03);
+}
+
+.btn-agregar-fila:hover,
+.btn-eliminar:hover {
+    transform: scale(1.03);
+}
+
+/* NUEVO: botones Guardar y Cancelar de la fila editable */
+.btn-guardar-fila,
+.btn-cancelar-fila {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.btn-guardar-fila:hover,
+.btn-cancelar-fila:hover {
+    transform: scale(1.03);
+}
+
+/* ======================================================== 
+==================Página detalle.html======================
+===========================================================*/
+
+.detalle-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.detalle-container h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.fichas-scroll {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.ficha-articulo {
+    background-color: rgba(27, 54, 93, 0.90);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s ease;
+}
+
+.ficha-articulo:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.ficha-articulo.seleccionada {
+    border-color: #9d4edd;
+}
+
+.ficha-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ficha-encabezado h2 {
+    margin: 0;
+    color: white;
+}
+
+.ficha-encabezado span {
+    color: #d9e5f5;
+    font-weight: bold;
+}
+
+.caracteristicas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caracteristica-nueva {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.caracteristica-nueva input {
+    flex: 1;
+}
+
+.caracteristica {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+}
+
+.nombre-caracteristica {
+    font-weight: bold;
+    color: white;
+}
+
+.valor-caracteristica {
+    color: #e5e5e5;
+}
+
+.ficha-descripcion,
+.ficha-observaciones {
+    margin-top: 20px;
+}
+
+.ficha-descripcion h3,
+.ficha-observaciones h3 {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.ficha-descripcion p,
+.ficha-observaciones p {
+    margin: 0;
+    color: #e5e5e5;
+}
+
+.barra-acciones-fija {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+.btn-editar,
+.btn-eliminar,
+.btn-agregar-caracteristica,
+.btn-agregar-ficha,
+.btn-editar-unidad,
+.btn-guardar-edicion,
+.btn-cancelar-edicion,
+.btn-agregar-caracteristica-edicion {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.btn-editar:disabled,
+.btn-eliminar:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-back:hover {
+    opacity: 0.7;
+}
+
+/*/////// editar.php////////////////*/
+
+.filtros-estado {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-filtro {
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: #2a4d7c;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.btn-filtro.activo {
+    border-color: #9d4edd;
+    background-color: #1b365d;
+}
+
+.inventory-table input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn-guardar-fila,
+.btn-cancelar-fila,
+.btn-guardar-articulo,
+.btn-cancelar-edicion-articulo {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.ficha-acciones-individual {
+    margin-top: 15px;
+}
+
+.btn-eliminar-unidad {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
+/*/////////detalle.php////////////////////////////
+//////////////////////////////////////////////////*/
+
+.caracteristica-edicion-fila {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.caracteristica-edicion-fila input {
+    flex: 1;
+}
+
+.caracteristica select,
+.caracteristica input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-quitar-caracteristica {
+    background: none;
+    border: none;
+    color: #ff8888;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+/*///////////////////////////////////////////////
+///////////gestion de usuarios//////////////////*/
+
+
+
+.btn-gestion-usuarios {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2a4d7c;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-gestion-usuarios:hover {
+    background-color: #ffffff;
+    color: #1b365d;
+}
+
+.campo-correo-compuesto {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.campo-correo-compuesto input {
+    flex: 1;
+}
+
+.dominio-fijo {
+    color: #d9e5f5;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/*////////////////////////////////////////////
+///////////ventana de confirmacion////////////
+////////////////////////////////////////////*/
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-caja {
+    background-color: #1b365d;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.modal-caja p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.modal-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.modal-botones button {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#modal-btn-si {
+    background-color: #c0392b;
+    color: white;
+}
+
+#modal-btn-no {
+    background-color: #ffffff;
+    color: #1b365d;
+}
+
+#modal-input-contrasena {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Responsividad para celulares */
+@media (max-width: 768px) {
+    .header-colegio {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+    .header-colegio h1 {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    .buttons-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
